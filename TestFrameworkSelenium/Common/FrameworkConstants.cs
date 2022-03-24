@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TestSelenium.Common
 {
- public   class FrameworkConstants
+    public class FrameworkConstants
     {
-      
+
         public const string filePath = "Configuration\\BaseConfig.json";
         public const string computerName = "COMPUTERNAME";
-        
+        public const string Success = "OK";
 
     }
 }

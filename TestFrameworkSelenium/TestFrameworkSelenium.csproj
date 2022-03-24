@@ -85,10 +85,12 @@
     <Compile Include="Common\CommonTestDataReader.cs" />
     <Compile Include="Common\ConfigReader.cs" />
     <Compile Include="Common\FrameworkConstants.cs" />
+    <Compile Include="PageModel\APIUtil.cs" />
     <Compile Include="PageModel\CareersPage.cs" />
     <Compile Include="PageModel\HomePage.cs" />
     <Compile Include="TestCases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestcasesAPI.cs" />
     <Compile Include="Util\CommonTest.cs" />
   </ItemGroup>
   <ItemGroup>

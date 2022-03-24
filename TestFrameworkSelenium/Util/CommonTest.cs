@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using TestFrameworkSelenium.PageModel;
 using TestSelenium.Common;
 using TestSelenium.PageModel;
 
@@ -32,6 +33,7 @@ namespace TestSelenium
         public TestContext TestContext { get; set; }
         protected HomePage _homePage;
         protected CareersPage _careersPage;
+        protected APIUtil _apiUtil;
         #endregion
 
 
@@ -166,7 +168,7 @@ namespace TestSelenium
         public void InitializePageModel()
         {
             _homePage = new HomePage(driver);
-            _careersPage = new CareersPage(driver);
+            _careersPage = new CareersPage(driver);           
         }
         #endregion
 
@@ -297,6 +299,14 @@ namespace TestSelenium
             return restRequest;
         }
 
+        public RestRequest DeleteRequest(string endpoint, string acceptToken = null)
+        {
+            RestRequest restRequest = new RestRequest(endpoint, Method.DELETE);
+            restRequest.RequestFormat = DataFormat.Json;
+            restRequest.AddHeader("Content-Type", "application/json");
+            restRequest.AddHeader("Accept", acceptToken);
+            return restRequest;
+        }
 
         public RestRequest AddParameter(RestRequest restRequest, Dictionary<string, object> parameter)
         {
